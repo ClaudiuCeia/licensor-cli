@@ -1,0 +1,34 @@
+{
+  "name": "license-cli",
+  "version": "1.0.0",
+  "description": "Easily choose an Open Source license for your awesome project",
+  "main": "src/cli.js",
+  "author": {
+    "name": "Claudiu Ceia",
+    "email": "claudiu.ceia@gmail.com",
+    "url": "https://github.com/ClaudiuCeia"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "cli-app",
+    "cli",
+    "license"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "inquirer": "^6.0.0",
+    "meow": "^5.0.0",
+    "strip-indent": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  },
+  "scripts": {
+    "start": "node ./src/cli.js",
+    "test": "yarn lint",
+    "lint": "eslint . --fix"
+  }
+}
