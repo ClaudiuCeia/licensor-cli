@@ -1,5 +1,7 @@
 # license-cli  [![Build Status](https://api.travis-ci.com/ClaudiuCeia/license-cli.svg?branch=master)](https://travis-ci.org/ClaudiuCeia/licensor-cli)
 
+_Easily choose an Open Source license for your awesome project_
+
 ## Usage
 
 ```
