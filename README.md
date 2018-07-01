@@ -1,6 +1,6 @@
 # license-cli
 
-<img src="screenshot.gif" width="700">
+<img src="https://github.com/ClaudiuCeia/licensor-cli/blob/master/screenshot.gif" width="700">
 
 ## Built with
 
