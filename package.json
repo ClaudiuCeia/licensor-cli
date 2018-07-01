@@ -1,6 +1,6 @@
 {
   "name": "licensor-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Easily choose an Open Source license for your awesome project",
   "main": "src/cli.js",
   "author": {
@@ -12,6 +12,9 @@
     "url": "https://github.com/ClaudiuCeia/licensor-cli",
     "type": "git"
   },
+  "files": [
+    "src"
+  ],
   "bugs": "https://github.com/ClaudiuCeia/licensor-cli/issues",
   "bin": {
     "licensor-cli": "src/cli.js"
