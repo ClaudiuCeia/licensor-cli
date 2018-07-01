@@ -179,7 +179,7 @@ inquirer.prompt(questions).then(answers => {
 
   const licenseText = stripIndent(chosenLicense.license(params));
 
-  if (answers.saveCheck === 'stdoud') {
+  if (answers.saveCheck === 'stdout') {
     console.log(licenseText);
   }
 
