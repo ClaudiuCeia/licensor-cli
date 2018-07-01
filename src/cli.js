@@ -3,7 +3,6 @@
 const inquirer = require('inquirer');
 const licenses = require('./licenses');
 const stripIndent = require('strip-indent');
-const chalk = require('chalk');
 const fs = require('fs');
 
 console.log('Hi, let\'s choose the right license for your project!\n\n');
