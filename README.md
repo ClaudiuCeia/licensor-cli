@@ -1,6 +1,6 @@
-# license-cli  [![Build Status](https://api.travis-ci.com/ClaudiuCeia/license-cli.svg?branch=master)](https://travis-ci.org/ClaudiuCeia/licensor-cli) 
+[![Build Status](https://api.travis-ci.com/ClaudiuCeia/license-cli.svg?branch=master)](https://travis-ci.org/ClaudiuCeia/licensor-cli) [![Known Vulnerabilities](https://snyk.io/test/github/ClaudiuCeia/feature-bouncer/badge.svg)](https://snyk.io/test/github/ClaudiuCeia/feature-bouncer) [![Total Alerts](https://img.shields.io/lgtm/alerts/g/ClaudiuCeia/licensor-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ClaudiuCeia/licensor-cli/alerts/) [![Language Grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ClaudiuCeia/licensor-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ClaudiuCeia/licensor-cli/context:javascript)
 
-[![Total Alerts](https://img.shields.io/lgtm/alerts/g/ClaudiuCeia/licensor-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ClaudiuCeia/licensor-cli/alerts/) [![Language Grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ClaudiuCeia/licensor-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ClaudiuCeia/licensor-cli/context:javascript)
+# license-cli  
 
 _Easily choose an Open Source license for your awesome project_
 
