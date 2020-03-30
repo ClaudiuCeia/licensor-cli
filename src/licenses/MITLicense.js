@@ -1,5 +1,4 @@
-module.exports = (params) => {
-  return `
+module.exports = (params) => `
     MIT License
 
     Copyright (c) ${params.year} ${params.name}
@@ -22,4 +21,3 @@ module.exports = (params) => {
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
   `;
-};

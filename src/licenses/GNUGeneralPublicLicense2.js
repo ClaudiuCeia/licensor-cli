@@ -1,5 +1,4 @@
-module.exports = (params) => {
-  return `
+module.exports = (params) => `
       GNU GENERAL PUBLIC LICENSE
       Version 2, June 1991
 
@@ -340,4 +339,3 @@ module.exports = (params) => {
     library.  If this is what you want to do, use the GNU Lesser General
     Public License instead of this License.
   `;
-};

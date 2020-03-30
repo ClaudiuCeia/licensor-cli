@@ -1,5 +1,4 @@
-module.exports = () => {
-  return `
+module.exports = () => `
     This is free and unencumbered software released into the public domain.
 
     Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -25,4 +24,3 @@ module.exports = () => {
 
     For more information, please refer to <http://unlicense.org>
   `;
-};

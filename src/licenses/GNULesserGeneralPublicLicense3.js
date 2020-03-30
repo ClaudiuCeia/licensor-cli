@@ -1,5 +1,4 @@
-module.exports = () => {
-  return `
+module.exports = () => `
     GNU LESSER GENERAL PUBLIC LICENSE
     Version 3, 29 June 2007
 
@@ -166,4 +165,3 @@ module.exports = () => {
     permanent authorization for you to choose that version for the
     Library.
   `;
-};

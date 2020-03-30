@@ -1,19 +1,18 @@
 #!/usr/bin/env node
-'use strict';
 
 const inquirer = require('inquirer');
-const licenses = require('./licenses');
 const stripIndent = require('strip-indent');
 const fs = require('fs');
+const licenses = require('./licenses');
 
 console.log('Hi, let\'s choose the right license for your project!\n\n');
 
-var questions = [
+const questions = [
   {
     type: 'confirm',
     name: 'isOpenSource',
     message: 'Is this an Open Source project?',
-    default: true
+    default: true,
   },
   {
     type: 'list',
@@ -46,7 +45,7 @@ var questions = [
         short: 'Public domain',
       },
     ],
-    when: function(answers) {
+    when(answers) {
       return answers.isOpenSource;
     },
   },
@@ -63,21 +62,15 @@ var questions = [
       return `Here are a few ${licenseType} licenses for you to choose from.`;
     },
     choices: (answers) => {
-      const suitableLicenses = licenses.filter((license) => {
-        return license.type === answers.permisivness;
-      });
+      const suitableLicenses = licenses.filter((license) => license.type === answers.permisivness);
 
-      return suitableLicenses.map((license) => {
-        return {
-          name: license.name,
-          value: license,
-          short: license.name,
-        };
-      });
+      return suitableLicenses.map((license) => ({
+        name: license.name,
+        value: license,
+        short: license.name,
+      }));
     },
-    when: (answers) => {
-      return answers.isOpenSource;
-    },
+    when: (answers) => answers.isOpenSource,
   },
   /* {
     type: 'confirm',
@@ -126,7 +119,7 @@ var questions = [
     name: 'saveCheck',
     message: 'Final step! What do you want to do with the license?',
     choices: () => {
-      let choices = [{
+      const choices = [{
         name: 'Show in stdout',
         value: 'stdout',
         short: 'stdout',
@@ -136,45 +129,39 @@ var questions = [
         choices.push({
           name: 'Save content as LICENSE',
           value: 'create',
-          short: 'New LICENSE'
+          short: 'New LICENSE',
         });
       } else {
         choices.push({
           name: 'Save content as LICENSE_NEW (LICENSE file already exists)',
           value: 'create_secondary',
-          short: 'New LICENSE_NEW'
+          short: 'New LICENSE_NEW',
         });
         choices.push({
           name: 'Save content as LICENSE and rename existing file to LICENSE.bak',
           value: 'create_secondary_and_rename',
-          short: 'New LICENSE and rename old'
+          short: 'New LICENSE and rename old',
         });
       }
 
       return choices;
-    }
-  }
+    },
+  },
 ];
 
-inquirer.prompt(questions).then(answers => {
+inquirer.prompt(questions).then((answers) => {
   let params = {};
   let chosenLicense = {};
-  for (const license of licenses) {
-    if (license.name !== answers.licenseType.name) {
-      continue;
-    }
-
-    chosenLicense = answers.licenseType;
-    params = chosenLicense.params.reduce((acc, param) => {
-      acc = {
+  for (let i = 0; i < licenses.length; i += 1) {
+    if (licenses[i].name === answers.licenseType.name) {
+      chosenLicense = answers.licenseType;
+      params = chosenLicense.params.reduce((acc, param) => ({
         ...acc,
-        [param]: answers[param]
-      };
+        [param]: answers[param],
+      }), {});
 
-      return acc;
-    }, {});
-
-    break;
+      break;
+    }
   }
 
   const licenseText = stripIndent(chosenLicense.license(params));
@@ -191,16 +178,18 @@ inquirer.prompt(questions).then(answers => {
   if (answers.saveCheck === 'create_secondary_and_rename') {
     fs.rename('./LICENSE', './LICENSE.bak', (err) => {
       if (err) {
-        return console.warn(err);
+        console.warn(err);
       }
+      return null;
     });
   }
 
-  fs.writeFile(filePath, licenseText, function(err) {
-    if(err) {
-      return console.warn(err);
+  fs.writeFile(filePath, licenseText, (err) => {
+    if (err) {
+      console.warn(err);
     }
 
     console.log('All done!');
+    return null;
   });
 });

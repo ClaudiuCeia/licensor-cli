@@ -1,5 +1,4 @@
-module.exports = (params) => {
-  return `
+module.exports = (params) => `
     GNU LESSER GENERAL PUBLIC LICENSE
     Version 2.1, February 1999
 
@@ -505,4 +504,3 @@ module.exports = (params) => {
 
     That's all there is to it!
   `;
-};

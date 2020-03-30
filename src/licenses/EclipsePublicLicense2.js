@@ -1,5 +1,4 @@
-module.exports = () => {
-  return `
+module.exports = () => `
     Eclipse Public License - v 2.0
 
         THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE
@@ -278,4 +277,3 @@ module.exports = () => {
 
       You may add additional accurate notices of copyright ownership.
   `;
-};

@@ -1,5 +1,4 @@
-module.exports = (params) => {
-  return `
+module.exports = (params) => `
     GNU AFFERO GENERAL PUBLIC LICENSE
     Version 3, 19 November 2007
 
@@ -662,4 +661,3 @@ module.exports = (params) => {
     For more information on this, and how to apply and follow the GNU AGPL, see
     <http://www.gnu.org/licenses/>.
   `;
-};

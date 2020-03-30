@@ -1,6 +1,19 @@
+const MITLicense = require('./licenses/MITLicense');
+const ApacheLicense2 = require('./licenses/ApacheLicense2');
+const GNUGeneralPublicLicense3 = require('./licenses/GNUGeneralPublicLicense3');
+const BSD2Simplified = require('./licenses/BSD2Simplified');
+const BSD3ClauseNewOrRevisedLicense = require('./licenses/BSD3ClauseNewOrRevisedLicense');
+const EclipsePublicLicense2 = require('./licenses/EclipsePublicLicense2');
+const GNUAfferoGeneralPublicLicense3 = require('./licenses/GNUAfferoGeneralPublicLicense3');
+const GNUGeneralPublicLicense2 = require('./licenses/GNUGeneralPublicLicense2');
+const GNULesserGeneralPublicLicense21 = require('./licenses/GNULesserGeneralPublicLicense2_1');
+const GNULesserGeneralPublicLicense3 = require('./licenses/GNULesserGeneralPublicLicense3');
+const MozillaPublicLicense2 = require('./licenses/MozillaPublicLicense2');
+const TheUnlicense = require('./licenses/TheUnlicense');
+
 module.exports = [{
   name: 'MIT License',
-  license: require('./licenses/MITLicense'),
+  license: MITLicense,
   params: ['name', 'year'],
   type: 'permissive',
   description: `
@@ -12,7 +25,7 @@ module.exports = [{
 },
 {
   name: 'Apache License 2.0',
-  license: require('./licenses/ApacheLicense2'),
+  license: ApacheLicense2,
   params: ['name', 'year'],
   type: 'patents',
   description: `
@@ -20,11 +33,11 @@ module.exports = [{
     copyright and license notices. Contributors provide an express grant of
     patent rights. Licensed works, modifications, and larger works may be
     distributed under different terms and without source code.
-  `
+  `,
 },
 {
   name: 'GNU General Public License v3.0',
-  license: require('./licenses/GNUGeneralPublicLicense3'),
+  license: GNUGeneralPublicLicense3,
   params: ['name', 'year', 'description'],
   type: 'copyleft',
   description: `
@@ -33,31 +46,31 @@ module.exports = [{
     include larger works using a licensed work, under the same license.
     Copyright and license notices must be preserved. Contributors provide an
     express grant of patent rights
-  `
+  `,
 },
 {
   name: 'BSD 2-Clause "Simplified" License',
-  license: require('./licenses/BSD2Simplified'),
+  license: BSD2Simplified,
   params: ['year', 'name'],
   type: 'permissive',
   description: `
     A permissive license that comes in two variants, the BSD 2-Clause and
     BSD 3-Clause. Both have very minute differences to the MIT license.
-  `
+  `,
 },
 {
   name: 'BSD 3-Clause "New" or "Revised" License',
-  license: require('./licenses/BSD3ClauseNewOrRevisedLicense'),
+  license: BSD3ClauseNewOrRevisedLicense,
   type: 'permissive',
   params: ['year', 'name'],
   description: `
     A permissive license that comes in two variants, the BSD 2-Clause and
     BSD 3-Clause. Both have very minute differences to the MIT license.
-  `
+  `,
 },
 {
   name: 'Eclipse Public License 2.0',
-  license: require('./licenses/EclipsePublicLicense2'),
+  license: EclipsePublicLicense2,
   type: 'commercially-friendly',
   params: [],
   description: `
@@ -65,11 +78,11 @@ module.exports = [{
     commercially license binaries; a modern royalty-free patent license
     grant; and the ability for linked works to use other licenses, including
     commercial ones
-  `
+  `,
 },
 {
   name: 'GNU Affero General Public License 3.0',
-  license: require('./licenses/GNUAfferoGeneralPublicLicense3'),
+  license: GNUAfferoGeneralPublicLicense3,
   type: 'copyleft',
   params: ['year', 'name', 'description'],
   description: `
@@ -80,11 +93,11 @@ module.exports = [{
     express grant of patent rights. When a modified version is used to provide
     a service over a network, the complete source code of the modified version
     must be made available.
-  `
+  `,
 },
 {
   name: 'GNU General Public License v2.0',
-  license: require('./licenses/GNUGeneralPublicLicense2'),
+  license: GNUGeneralPublicLicense2,
   params: ['year', 'name', 'description'],
   type: 'copyleft',
   description: `
@@ -92,11 +105,11 @@ module.exports = [{
   copyleft requirement. When distributing derived works, the source code of the
   work must be made available under the same license. There are multiple
   variants of the GNU GPL, each with different requirements.
-  `
+  `,
 },
 {
   name: 'GNU Lesser General Public License v2.1',
-  license: require('./licenses/GNULesserGeneralPublicLicense2_1'),
+  license: GNULesserGeneralPublicLicense21,
   params: ['year', 'name', 'description'],
   type: 'copyleft',
   description: `
@@ -104,11 +117,11 @@ module.exports = [{
   works be licensed under the same license, but works that only link to it do
   not fall under this restriction. There are two commonly used versions of the
   GNU LGPL.
-  `
+  `,
 },
 {
   name: 'GNU Lesser General Public License v3.0',
-  license: require('./licenses/GNULesserGeneralPublicLicense3'),
+  license: GNULesserGeneralPublicLicense3,
   params: ['year', 'name', 'description'],
   type: 'copyleft',
   description: `
@@ -116,11 +129,11 @@ module.exports = [{
   complete source code of licensed works and modifications, which include larger
   works using a licensed work, under the same license. Copyright and license
   notices must be preserved. Contributors provide an express grant of patent
-  rights  `
+  rights  `,
 },
 {
   name: 'Mozilla Public License 2.0',
-  license: require('./licenses/MozillaPublicLicense2'),
+  license: MozillaPublicLicense2,
   params: [],
   type: 'copyleft',
   description: `
@@ -131,16 +144,16 @@ module.exports = [{
     express grant of patent rights. However, a larger work using the licensed
     work may be distributed under different terms and without source code for
     files added in the larger work
-  `
+  `,
 },
 {
   name: 'The Unlicense',
-  license: require('./licenses/TheUnlicense'),
+  license: TheUnlicense,
   params: [],
   type: 'public-domain',
   description: `
     A license with no conditions whatsoever which dedicates works to the public
     domain. Unlicensed works, modifications, and larger works may be distributed
     under different terms and without source code
-  `
+  `,
 }];
