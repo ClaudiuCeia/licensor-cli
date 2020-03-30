@@ -168,6 +168,7 @@ inquirer.prompt(questions).then((answers) => {
 
   if (answers.saveCheck === 'stdout') {
     console.log(licenseText);
+    return;
   }
 
   let filePath = './LICENSE';
