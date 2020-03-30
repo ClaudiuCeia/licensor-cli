@@ -1,6 +1,6 @@
 {
   "name": "licensor-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Easily choose an Open Source license for your awesome project",
   "main": "src/cli.js",
   "author": {
