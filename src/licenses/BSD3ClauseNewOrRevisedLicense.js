@@ -1,4 +1,4 @@
-module.exports = (params) => `
+export default (params) => `
     BSD 3-Clause License
 
     Copyright (c) ${params.year}, ${params.name}

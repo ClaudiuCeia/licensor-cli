@@ -1,4 +1,4 @@
-module.exports = (params) => `
+export default (params) => `
     MIT License
 
     Copyright (c) ${params.year} ${params.name}

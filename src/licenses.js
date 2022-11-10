@@ -1,17 +1,17 @@
-const MITLicense = require('./licenses/MITLicense');
-const ApacheLicense2 = require('./licenses/ApacheLicense2');
-const GNUGeneralPublicLicense3 = require('./licenses/GNUGeneralPublicLicense3');
-const BSD2Simplified = require('./licenses/BSD2Simplified');
-const BSD3ClauseNewOrRevisedLicense = require('./licenses/BSD3ClauseNewOrRevisedLicense');
-const EclipsePublicLicense2 = require('./licenses/EclipsePublicLicense2');
-const GNUAfferoGeneralPublicLicense3 = require('./licenses/GNUAfferoGeneralPublicLicense3');
-const GNUGeneralPublicLicense2 = require('./licenses/GNUGeneralPublicLicense2');
-const GNULesserGeneralPublicLicense21 = require('./licenses/GNULesserGeneralPublicLicense2_1');
-const GNULesserGeneralPublicLicense3 = require('./licenses/GNULesserGeneralPublicLicense3');
-const MozillaPublicLicense2 = require('./licenses/MozillaPublicLicense2');
-const TheUnlicense = require('./licenses/TheUnlicense');
+import MITLicense from './licenses/MITLicense.js';
+import ApacheLicense2 from './licenses/ApacheLicense2.js';
+import GNUGeneralPublicLicense3 from './licenses/GNUGeneralPublicLicense3.js';
+import BSD2Simplified from './licenses/BSD2Simplified.js';
+import BSD3ClauseNewOrRevisedLicense from './licenses/BSD3ClauseNewOrRevisedLicense.js';
+import EclipsePublicLicense2 from './licenses/EclipsePublicLicense2.js';
+import GNUAfferoGeneralPublicLicense3 from './licenses/GNUAfferoGeneralPublicLicense3.js';
+import GNUGeneralPublicLicense2 from './licenses/GNUGeneralPublicLicense2.js';
+import GNULesserGeneralPublicLicense21 from './licenses/GNULesserGeneralPublicLicense2_1.js';
+import GNULesserGeneralPublicLicense3 from './licenses/GNULesserGeneralPublicLicense3.js';
+import MozillaPublicLicense2 from './licenses/MozillaPublicLicense2.js';
+import TheUnlicense from './licenses/TheUnlicense.js';
 
-module.exports = [{
+export default [{
   name: 'MIT License',
   license: MITLicense,
   params: ['name', 'year'],

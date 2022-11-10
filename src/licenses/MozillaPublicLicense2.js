@@ -1,4 +1,4 @@
-module.exports = () => `
+export default () => `
     Mozilla Public License Version 2.0
     ==================================
 

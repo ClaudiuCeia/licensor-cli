@@ -1,4 +1,4 @@
-module.exports = () => `
+export default () => `
     Eclipse Public License - v 2.0
 
         THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE

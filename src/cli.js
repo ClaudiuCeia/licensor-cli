@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const inquirer = require('inquirer');
-const stripIndent = require('strip-indent');
-const fs = require('fs');
-const licenses = require('./licenses');
+import inquirer from 'inquirer';
+import stripIndent from 'strip-indent';
+import { existsSync, rename, writeFile } from 'fs';
+import licenses from './licenses.js';
 
 console.log('Hi, let\'s choose the right license for your project!\n\n');
 
@@ -125,7 +125,7 @@ const questions = [
         short: 'stdout',
       }];
 
-      if (!fs.existsSync('./LICENSE')) {
+      if (!existsSync('./LICENSE')) {
         choices.push({
           name: 'Save content as LICENSE',
           value: 'create',
@@ -177,7 +177,7 @@ inquirer.prompt(questions).then((answers) => {
   }
 
   if (answers.saveCheck === 'create_secondary_and_rename') {
-    fs.rename('./LICENSE', './LICENSE.bak', (err) => {
+    rename('./LICENSE', './LICENSE.bak', (err) => {
       if (err) {
         console.warn(err);
       }
@@ -185,7 +185,7 @@ inquirer.prompt(questions).then((answers) => {
     });
   }
 
-  fs.writeFile(filePath, licenseText, (err) => {
+  writeFile(filePath, licenseText, (err) => {
     if (err) {
       console.warn(err);
     }

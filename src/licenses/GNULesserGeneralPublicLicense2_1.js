@@ -1,4 +1,4 @@
-module.exports = (params) => `
+export default (params) => `
     GNU LESSER GENERAL PUBLIC LICENSE
     Version 2.1, February 1999
 
