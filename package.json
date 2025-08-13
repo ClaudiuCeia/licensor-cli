@@ -30,7 +30,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "inquirer": "9.1.4",
+    "inquirer": "10.0.0",
     "snyk": "^1.1057.0",
     "strip-indent": "4.0.0"
   },
